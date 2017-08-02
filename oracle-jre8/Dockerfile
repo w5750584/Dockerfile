@@ -6,7 +6,7 @@ RUN apk add --no-cache curl tar  && \
     mv jdk1.8.0_144 /usr/java && \
     rm -rf /usr/java/COPYRIGHT /usr/java/LICENSE /usr/java//usr/java/README.html /usr/java/release /usr/java/THIRDPARTYLICENSEREADME.txt && \
     rm -rf /tmp/* && \
-    rm -rf rm -rf /var/cache/apk/* && \
+    rm -rf /var/cache/apk/* && \
     apk del curl tar
 ENV JAVA_HOME=/usr/java/ \
     CLASSPATH=$JAVA_HOME/lib \
