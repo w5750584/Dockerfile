@@ -3,7 +3,7 @@ MAINTAINER xiaofeng.di <w5750584@gmail.com>
 RUN apk add --no-cache curl tar  && \
     curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/server-jre-8u144-linux-x64.tar.gz -o /tmp/server-jre-8u144-linux-x64.tar.gz  && \
     tar zxvf  /tmp/server-jre-8u144-linux-x64.tar.gz && \
-    mv /tmp/jdk1.8.0_144 /usr/java && \
+    mv jdk1.8.0_144 /usr/java && \
     rm -rf /usr/java/COPYRIGHT /usr/java/LICENSE /usr/java//usr/java/README.html /usr/java/release /usr/java/THIRDPARTYLICENSEREADME.txt && \
     rm -rf /tmp/* && \
     rm -rf rm -rf /var/cache/apk/* && \
