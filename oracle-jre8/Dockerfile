@@ -1,11 +1,14 @@
 FROM xiaofengdi/alpine-glibc
 MAINTAINER xiaofeng.di <w5750584@gmail.com>
-ADD jdk /usr/java
+RUN apk add --no-cache curl tar  && \
+    curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/server-jre-8u144-linux-x64.tar.gz -o /tmp/server-jre-8u144-linux-x64.tar.gz  && \
+    tar zxvf  /tmp/server-jre-8u144-linux-x64.tar.gz && \
+    mv /tmp/jdk1.8.0_144 /usr/java && \
+    rm -rf /usr/java/COPYRIGHT /usr/java/LICENSE /usr/java//usr/java/README.html /usr/java/release /usr/java/THIRDPARTYLICENSEREADME.txt && \
+    rm -rf /tmp/* && \
+    rm -rf rm -rf /var/cache/apk/* && \
+    apk del curl tar
 ENV JAVA_HOME=/usr/java/ \
     CLASSPATH=$JAVA_HOME/lib \
-    LANG=en_US.UTF8 \
-    TIME_ZONE=Asia/Shanghai
-RUN echo "${TIME_ZONE}" > /etc/timezone && \
-    rm -rf /etc/localtime && \
-    ln -sf /usr/share/zoneinfo/${TIME_ZONE} /etc/localtime
+    LANG=en_US.UTF8 
 ENV PATH=${JAVA_HOME}/bin:${PATH}
