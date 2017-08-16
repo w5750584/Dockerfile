@@ -8,6 +8,6 @@ RUN apk add --no-cache curl tar  && \
     rm -rf /var/cache/apk/* && \
     apk del curl tar
 ENV JAVA_HOME=/usr/java/ \
-    CLASSPATH=$JAVA_HOME/lib:$JAVA_HOME/jre/lib:$CLASSPATH \
+    CLASSPATH=$JAVA_HOME/lib \
     LANG=en_US.UTF8 
-ENV PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
+ENV PATH=${JAVA_HOME}/bin:${PATH}
