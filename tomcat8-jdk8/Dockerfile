@@ -1,9 +1,9 @@
 FROM xiaofengdi/oracle-jdk8:latest
 MAINTAINER xiaofeng.di <w5750584@gmail.com>
 RUN apk add --no-cache curl tar  && \
-    curl http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.16/bin/apache-tomcat-8.5.16.tar.gz -o /tmp/apache-tomcat-8.5.16.tar.gz && \
-    tar zxvf /tmp/apache-tomcat-8.5.16.tar.gz && \
-    mv apache-tomcat-8.5.16 /usr/local/tomcat && \
+    curl http://mirror.bit.edu.cn/apache/tomcat/tomcat-8/v8.5.20/bin/apache-tomcat-8.5.20.tar.gz -o /tmp/apache-tomcat-8.5.20.tar.gz && \
+    tar zxvf /tmp/apache-tomcat-8.5.20.tar.gz && \
+    mv apache-tomcat-8.5.20 /usr/local/tomcat && \
     apk del curl tar && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
