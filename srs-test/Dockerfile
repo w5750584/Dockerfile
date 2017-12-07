@@ -2,7 +2,7 @@ FROM xiaofengdi/tomcat8:debian-oracle-jre8
 RUN \
     apt-get update && \
     apt-get install -y --force-yes --no-install-recommends libpcre3 zlib1g && \
-    apt-get install -y --force-yes --no-install-recommends python automake autoconf libtool build-essential wget ca-certificates unzip libpcre3-dev zlib1g-dev && \
+    apt-get install -y --force-yes --no-install-recommends python automake autoconf libtool* build-essential wget ca-certificates unzip libpcre3-dev zlib1g-dev && \
     mkdir -p /data/install && \
     cd /data/install && \
     wget https://github.com/w5750584/srs/releases/download/lolaage-r0/srs.tar.gz && \
