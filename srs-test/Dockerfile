@@ -17,4 +17,5 @@ RUN apt-get update && \
     rm -rf /data/install && \
     apt-get remove -y --force-yes --purge --auto-remove automake autoconf libtool build-essential wget ca-certificates unzip libpcre3-dev zlib1g-dev && \
     rm -rf /var/lib/apt/lists/*
+    
 WORKDIR /data
