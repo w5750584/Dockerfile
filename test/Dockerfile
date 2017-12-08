@@ -8,4 +8,4 @@ RUN \
     cd /data/install && \
     wget https://github.com/w5750584/srs/releases/download/lolaage-r0/srs.tar.gz && \
     tar xvpf srs.tar.gz && \
-    cd srs-2.0-r1/trunk && \
+    cd srs-2.0-r1/trunk
