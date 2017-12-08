@@ -6,9 +6,9 @@ RUN echo "Asia/Shanghai" > /etc/timezone && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     apt-get update && \
     apt-get -y install curl && \
-    curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u144-b01/090f390dda5b47b9b721c7dfaa008135/jre-8u144-linux-x64.tar.gz -o /tmp/jre-8u144-linux-x64.tar.gz  && \
-    tar zxvf  /tmp/jre-8u144-linux-x64.tar.gz && \
-    mv jre1.8.0_144 /usr/java && \
+    curl -jksSLH "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jre-8u151-linux-x64.tar.gz -o /tmp/jre-8u151-linux-x64.tar.gz  && \
+    tar zxvf  /tmp/jre-8u151-linux-x64.tar.gz && \
+    mv jre1.8.0_151 /usr/java && \
     rm -rf /usr/java/COPYRIGHT /usr/java/LICENSE /usr/java//usr/java/README.html /usr/java/release /usr/java/THIRDPARTYLICENSEREADME.txt && \
     rm -rf /tmp/* && \
     apt-get -y remove curl && \
