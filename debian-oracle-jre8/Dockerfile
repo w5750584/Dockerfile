@@ -1,4 +1,5 @@
-FROM debian:latest
+#FROM debian:latest
+FROM debian:wheezy
 MAINTAINER Xiaofeng <w5750584@gmail.com>
 RUN echo "Asia/Shanghai" > /etc/timezone && \
     rm -rf /etc/localtime && \
