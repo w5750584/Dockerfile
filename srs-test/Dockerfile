@@ -1,5 +1,5 @@
-#FROM xiaofengdi/tomcat8:debian-oracle-jre8
-FROM debian:wheezy
+FROM xiaofengdi/tomcat8:debian-oracle-jre8
+#FROM debian:wheezy
 RUN \
     apt-get update && \
     apt-get install -y --force-yes --no-install-recommends libpcre3 zlib1g && \
