@@ -7,6 +7,7 @@ RUN apt-get update && \
     mv apache-tomcat-8.5.24 /usr/local/tomcat && \
     apt-get -y remove curl && \
     rm -rf /var/lib/apt/* && \
+    rm -rf /usr/local/tomcat/webapps/* && \
     rm -rf /tmp/*
 ENV CATALINA_HOME /usr/local/tomcat/
 WORKDIR $CATALINA_HOME
