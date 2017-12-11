@@ -15,5 +15,5 @@ RUN echo "Asia/Shanghai" > /etc/timezone && \
     rm -rf /var/lib/apt/*
 ENV JAVA_HOME=/usr/java/ \
     CLASSPATH=$JAVA_HOME/lib \
-    LANG=zh_CN.UTF-8
+    LANG=C.UTF-8
 ENV PATH=${JAVA_HOME}/bin:${PATH}debian-oracle-jre8:$PATH
